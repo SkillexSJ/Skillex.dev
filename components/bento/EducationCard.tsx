@@ -21,7 +21,7 @@ export function EducationCard() {
         </h3>
       </div>
       <div className="flex flex-col gap-3 mt-1 w-full">
-        {educationData.slice(0, 2).map((edu) => (
+        {educationData.slice(0, 3).map((edu) => (
           <div key={edu.id} className="flex items-center justify-between gap-4 w-full border-b border-border/50 pb-3 last:border-0 last:pb-0">
             <div className="flex flex-col gap-0.5">
               <span className="text-sm font-bold text-foreground leading-snug">{edu.degree}</span>

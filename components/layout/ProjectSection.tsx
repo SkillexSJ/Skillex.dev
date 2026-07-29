@@ -14,7 +14,7 @@ function ProjectCardWrapper({
   return (
     <div
       onClick={() => setOpen(true)}
-      className="group relative flex flex-col justify-between border border-border/40 bg-card rounded-[24px] overflow-hidden cursor-pointer h-[320px] transition-all duration-500 hover:border-primary/45 hover:-translate-y-1.5 shadow-md hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
+      className="group relative flex flex-col justify-between border border-border/40 bg-card rounded-[24px] overflow-hidden cursor-pointer h-[420px] md:h-[480px] transition-all duration-500 hover:border-primary/45 hover:-translate-y-1.5 shadow-md hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
     >
       {/* Background Image: Shown clearly by default, dims and blurs slightly on hover */}
       {project.image && (

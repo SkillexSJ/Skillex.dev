@@ -34,7 +34,7 @@ export const socialsData: SocialLink[] = [
   },
   {
     name: "Email",
-    url: "mailto:your@email.com",
+    url: "mailto:sajidtech71.sk@gmail.com",
     icon: Mail,
     username: "sajidtech71.sk@gmail.com",
   },
@@ -51,5 +51,6 @@ export const profileData = {
   projectsCompleted: 6,
   technologiesUsed: 20,
   githubUsername: "SkillexSJ",
-  resumeUrl: "/resume.pdf",
+  resumeUrl:
+    "https://drive.google.com/file/d/1hGSZEa598W2YumJ8eQxaSq-UzFAHez2O/view?usp=sharing",
 };

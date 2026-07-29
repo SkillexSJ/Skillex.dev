@@ -28,6 +28,37 @@ export function ExperienceSection() {
       </div>
 
       <div className="flex flex-col gap-6 relative">
+        {experienceData.length === 0 && (
+          <div className="border border-white/[0.04] border-dashed bg-[#121214]/50 rounded-[20px] p-10 flex flex-col items-center justify-center gap-3 text-center">
+            <div className="flex items-center justify-center size-12 rounded-2xl bg-purple-500/[0.06] border border-purple-500/10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-purple-400/50"
+              >
+                <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <p className="text-sm text-muted-foreground font-semibold">
+              Starting my professional journey
+            </p>
+            <p className="text-xs text-muted-foreground/60 max-w-md leading-relaxed">
+              I'm a fresher actively looking for opportunities. While I don't
+              have formal work experience yet, I've built real full-stack
+              projects that demonstrate my skills. Check out my{" "}
+              <span className="text-purple-400/70 font-medium">Projects</span>{" "}
+              section to see what I can build.
+            </p>
+          </div>
+        )}
         {experienceData.map((exp) => (
           <div
             key={exp.id}

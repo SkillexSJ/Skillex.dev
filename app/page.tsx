@@ -11,6 +11,7 @@ import { ProjectsSection } from "@/components/layout/ProjectSection";
 import { ContactSection } from "@/components/layout/ContactSection";
 import { SkillsSection } from "@/components/layout/SkillSection";
 import { ExperienceSection } from "@/components/layout/ExperienceSection";
+import { EducationSection } from "@/components/layout/EducationSection";
 import { Signature } from "@/components/ui/signature";
 import { StaggeredMenu } from "@/components/StaggeredMenu";
 
@@ -19,12 +20,13 @@ const NAV_ITEMS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<
-    "overview" | "projects" | "skills" | "experience" | "contact"
+    "overview" | "projects" | "skills" | "experience" | "education" | "contact"
   >("overview");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -128,6 +130,10 @@ export default function Home() {
               <ExperienceSection key="experience" />
             )}
 
+            {activeTab === "education" && (
+              <EducationSection key="education" />
+            )}
+
             {activeTab === "contact" && <ContactSection key="contact" />}
           </AnimatePresence>
         </div>
@@ -163,9 +169,13 @@ export default function Home() {
       </footer>
 
       {/* Floating social links Dock at the bottom */}
-      <div className={`fixed bottom-6 left-0 right-0 z-60 flex justify-center pointer-events-none h-20 transition-all duration-300 ${
-        isMenuOpen ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100"
-      }`}>
+      <div
+        className={`fixed bottom-6 left-0 right-0 z-60 flex justify-center pointer-events-none h-20 transition-all duration-300 ${
+          isMenuOpen
+            ? "opacity-0 pointer-events-none translate-y-4"
+            : "opacity-100"
+        }`}
+      >
         <div className="relative w-full max-w-lg h-full pointer-events-auto flex items-center justify-center">
           <Dock items={dockItems} />
         </div>
@@ -173,5 +183,3 @@ export default function Home() {
     </div>
   );
 }
-
-// ─── Sub-Section Components ──────────────────────────────────────────────────

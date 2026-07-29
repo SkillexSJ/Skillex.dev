@@ -28,14 +28,15 @@ export function ProjectDetailsModalContent({ project }: ProjectDetailsModalConte
     <div className="flex flex-col gap-6 text-left w-full">
       {/* Top Section: Photo Card (Screenshot) */}
       {project.image && (
-        <div className="relative w-full h-[240px] md:h-[300px] rounded-2xl overflow-hidden border border-border/80 shadow-inner bg-muted/25 shrink-0">
+        <div className="relative w-full rounded-2xl overflow-hidden border border-border/80 shadow-inner bg-muted/25 shrink-0">
           <Image
             src={project.image}
             alt={project.title}
-            fill
+            width={1200}
+            height={750}
             sizes="(max-width: 768px) 100vw, 800px"
             priority
-            className="object-cover object-top hover:scale-102 transition-transform duration-500"
+            className="w-full h-auto object-contain rounded-2xl"
           />
         </div>
       )}

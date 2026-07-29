@@ -4,8 +4,8 @@ export interface LearningTopic {
 }
 
 export const learningTopics: LearningTopic[] = [
-  { name: "Next.js 16 Server Components", progress: 90 },
+  { name: "AWS", progress: 10 },
   { name: "Go & Microservices", progress: 75 },
   { name: "AI Agents & LLM Integrations", progress: 60 },
-  { name: "Docker & Kubernetes Deployment", progress: 45 },
+  { name: "Docker & Nginx", progress: 45 },
 ];

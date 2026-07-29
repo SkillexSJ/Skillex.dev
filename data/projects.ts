@@ -47,7 +47,9 @@ export const projectsData: Project[] = [
     features: [
       "Smart Discovery: Advanced search and filtering to find courts by sport, price, location, and availability.",
       "Seamless Booking: Real-time calendar integration and Stripe payments for instant scheduling.",
-      "Interactive Dashboard: Track upcoming matches, booking history, and manage payments",
+      "AI Booking Assistant: Built an intent-aware chatbot using Next.js and Vercel AI SDK to perform real-time database tool-calling and render interactive venue cards inline.",
+      "Transactional Slot Engine: Engineered a reservation system using Prisma/PostgreSQL transactions, preventing double-bookings with interval checks and cron-job cleanups.",
+      "Analytics Heatmap: Developed an organizer dashboard aggregating transactional data to render a 2D booking density heatmap (Day x Slot) with dynamic CSS.",
       "Review System: Rate facilities and leave feedback to help the sports community.",
       "Completely responsive and optimized layout for mobile",
     ],
@@ -175,6 +177,39 @@ export const projectsData: Project[] = [
   //     "Custom RSS 2.0 feed generator for content aggregators",
   //   ],
   // },
+  {
+    id: "event-horizon",
+    title: "Event Horizon",
+    description:
+      "Event Horizon is a full-stack event management platform that lets hosts create and manage events while users discover, browse, and book tickets in real time. Powered by a Go/Echo REST API with MongoDB and a React + Vite frontend featuring stunning animations and a responsive UI.",
+    image: "/images/project3.png",
+    techStack: [
+      "Go",
+      "Echo",
+      "MongoDB",
+      "JWT",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Tanstack Query",
+      "Framer Motion",
+      "React Router",
+    ],
+    category: "fullstack",
+    liveUrl: "www.event-horizons.app",
+    githubUrl: "https://github.com/SkillexSJ/Event-Horizon-Frontend",
+    featured: true,
+    tags: ["Go", "REST API", "Events", "Ticketing", "MongoDB"],
+    features: [
+      "JWT Authentication: Secure login and registration with HttpOnly cookie-based JWT tokens and bcrypt password hashing.",
+      "Smart Ticketing Engine: Multi-tier ticket types (VIP, Regular, Student) with real-time inventory tracking of total vs. available quantities.",
+      "Transactional Bookings: ACID-compliant booking flow with pending, confirmed, and cancelled statuses ensuring data integrity.",
+      "Role-Based Access Control: Distinct User and Host roles with protected API routes enforced via Echo middleware.",
+      "Automated Event Cleanup: Background goroutine scheduler that periodically purges expired events with cascade deletion of related bookings.",
+      "Event Discovery & Dashboard: Feature-rich frontend with animated UI, category-based filtering, event detail pages, and a host management dashboard.",
+    ],
+  },
 ];
 
 export const projectCategories = [

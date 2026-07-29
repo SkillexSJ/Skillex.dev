@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SkillX | Full Stack Developer",
+  title: "SkilleX | Full Stack Developer",
   description:
     "Minimal portfolio for a Full Stack Developer specializing in MERN, Go, and Docker. Explore featured work, live activity, and contact details.",
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "Portfolio",
     "Web Developer",
   ],
-  authors: [{ name: "SkillX Developer" }],
+  authors: [{ name: "Sajid Khan" }],
   openGraph: {
-    title: "SkillX | Full Stack Developer",
+    title: "SkilleX | Full Stack Developer",
     description:
       "Minimal portfolio — MERN, Go, Docker. View projects, skills, and experience.",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SkillX | Full Stack Developer",
+    title: "SkilleX | Full Stack Developer",
     description:
       "Minimal portfolio — MERN, Go, Docker. View projects, skills, and experience.",
   },

@@ -10,9 +10,9 @@ const featuredProject = projectsData.find((p) => p.featured) ?? projectsData[0];
 
 export function FeaturedProjectCard() {
   return (
-    <div className="flex flex-col justify-between h-full w-full">
+    <div className="flex flex-col h-full w-full">
       {/* Top side text contents */}
-      <div className="w-full flex flex-col gap-3.5 text-left pt-6 px-6 md:px-8">
+      <div className="w-full flex flex-col gap-3 text-left">
         <div className="space-y-1.5">
           <span className="text-[11px] font-bold text-primary uppercase tracking-[0.15em] block mb-1 font-sans">
             Featured Project
@@ -30,7 +30,7 @@ export function FeaturedProjectCard() {
         </div>
 
         {/* Tech Stack Chips & Demo Button */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mt-1 w-full z-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 w-full z-10">
           <div className="flex flex-wrap gap-1.5">
             {featuredProject.techStack.map((tech) => (
               <span
@@ -56,8 +56,8 @@ export function FeaturedProjectCard() {
         </div>
       </div>
 
-      {/* Bottom side mock browser frame displaying the project image horizontally */}
-      <div className="w-full h-[280px] md:h-[450px] relative border-t border-border/60 bg-[#121214] shadow-2xl flex flex-col rounded-t-xl overflow-hidden mt-6">
+      {/* Bottom side mock browser frame — fills remaining space */}
+      <div className="w-full flex-1 min-h-[200px] relative border-t border-border/60 bg-[#121214] shadow-2xl flex flex-col rounded-t-xl overflow-hidden mt-4 -mb-6 -mx-6" style={{ width: "calc(100% + 3rem)" }}>
         {/* Mock browser Title Bar */}
         <div className="flex items-center justify-between border-b border-border/40 bg-[#1a1a1f] px-3.5 py-2 shrink-0 select-none">
           <div className="flex items-center gap-1.5">
