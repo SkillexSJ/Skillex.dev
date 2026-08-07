@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "SkilleX | Full Stack Developer",
   description:
     "Minimal portfolio for a Full Stack Developer specializing in MERN, Go, and Docker. Explore featured work, live activity, and contact details.",
+  icons: {
+    icon: "/logo.svg",
+  },
   keywords: [
     "Full Stack Developer",
     "MERN Stack",

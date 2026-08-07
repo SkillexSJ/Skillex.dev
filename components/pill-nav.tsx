@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import Image from 'next/image';
 
 export type PillNavItem = {
   label: string;
@@ -21,6 +22,7 @@ export interface PillNavProps {
   pillTextColor?: string;
   onMobileMenuClick?: () => void;
   onClick?: (e: React.MouseEvent, item: PillNavItem) => void;
+  onLogoClick?: (e: React.MouseEvent) => void;
   initialLoadAnimation?: boolean;
 }
 
@@ -37,6 +39,7 @@ const PillNav: React.FC<PillNavProps> = ({
   pillTextColor,
   onMobileMenuClick,
   onClick,
+  onLogoClick,
   initialLoadAnimation = true
 }) => {
   const resolvedPillTextColor = pillTextColor ?? baseColor;
@@ -260,6 +263,7 @@ const PillNav: React.FC<PillNavProps> = ({
             href={items[0].href}
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
+            onClick={onLogoClick}
             role="menuitem"
             ref={el => {
               if (el) logoRef.current = el as HTMLElement;
@@ -271,13 +275,14 @@ const PillNav: React.FC<PillNavProps> = ({
               background: baseColor
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+            <Image src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
           </Link>
         ) : (
           <a
             href={items?.[0]?.href || '#'}
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
+            onClick={onLogoClick}
             ref={el => {
               logoRef.current = el;
             }}

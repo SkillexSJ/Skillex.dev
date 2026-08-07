@@ -37,6 +37,14 @@ export default function Home() {
     setActiveTab(cleanTab);
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setActiveTab("overview");
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", "#overview");
+    }
+  };
+
   const dockItems = socialsData.map((social) => ({
     icon: <TechIcon name={social.name} className="size-5.5" />,
     label: social.name,
@@ -65,8 +73,9 @@ export default function Home() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex sticky top-0 w-full justify-center pt-6 pb-3 px-4 z-50">
         <PillNav
-          logo="/vercel.svg"
+          logo="/logo.svg"
           logoAlt={profileData.name}
+          onLogoClick={handleLogoClick}
           items={NAV_ITEMS}
           activeHref={`#${activeTab}`}
           baseColor="var(--card)"
@@ -81,7 +90,8 @@ export default function Home() {
       <div className="block md:hidden fixed top-0 left-0 right-0 z-50 pointer-events-none h-20">
         <StaggeredMenu
           isFixed={true}
-          logoUrl="/vercel.svg"
+          logoUrl="/logo.svg"
+          onLogoClick={handleLogoClick}
           items={staggeredItems}
           socialItems={staggeredSocials}
           accentColor="#a855f7"
